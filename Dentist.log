@@ -18,3 +18,5 @@
 2016-03-23 20:02:06,732 ERROR [main] o.d.u.s.DatabaseConnector [DatabaseConnector.java:62] You received exception java.sql.SQLException: Operation not allowed after ResultSet closed
 2016-03-23 20:02:55,131 ERROR [main] o.d.u.s.DatabaseConnector [DatabaseConnector.java:38] You received exception com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '6' for key 'PRIMARY'
 2016-03-23 20:02:55,138 ERROR [main] o.d.u.s.DatabaseConnector [DatabaseConnector.java:62] You received exception java.sql.SQLException: Operation not allowed after ResultSet closed
+2016-03-23 22:56:48,891 ERROR [main] o.d.u.s.DatabaseConnector [DatabaseConnector.java:30] You received exception com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '8' for key 'PRIMARY'
+2016-03-23 23:03:14,241 ERROR [main] o.d.u.s.DatabaseConnector [DatabaseConnector.java:30] You received exception com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '8' for key 'PRIMARY'
