@@ -1,12 +1,21 @@
-INSERT INTO dentist(id, name, nickname, email, experience,adress, phone)
-VALUES (4, 'Tom', 'Tom3', 'tom@gmail.com', '15 years', 'Dash St. 12', '0990909900');
-INSERT INTO dentist(id, name, nickname, email, experience, adress, phone)
-VALUES (5, 'Tom2', 'Tomas', 'tom2@gmail.com', '15 years', 'Dash St. 312', '099090932');
-INSERT INTO dentist(id, name, nickname, email, experience,adress, phone)
-VALUES (6, 'Joe', 'Joe', 'joe@gmail.com', '25 years', 'Queens St. 23/812', '0887862767');
-INSERT INTO dentist(id, name, nickname, email, experience, adress, phone)
-VALUES (7, 'Oliver', 'Oliver', 'oliver@gmail.com', '5 years', 'King St. 263', '0998465488');
-SELECT * FROM dentist;
-SELECT * FROM dentist WHERE id=2;
-UPDATE dentist SET name="Pavlo", nickname="Paul" WHERE id=3;
-DELETE FROM dentist WHERE id=5;
+CREATE TABLE `dentist` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(45) NOT NULL,
+  `nickname` varchar(45) NOT NULL,
+  `email` varchar(64) NOT NULL,
+  `experience` varchar(100) DEFAULT NULL,
+  `adress` varchar(100) NOT NULL,
+  `phone` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `id_UNIQUE` (`id`),
+  UNIQUE KEY `nickname_UNIQUE` (`nickname`),
+  UNIQUE KEY `email_UNIQUE` (`email`),
+  UNIQUE KEY `phone_UNIQUE` (`phone`)
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8 COMMENT='	';
+INSERT INTO `dentist` VALUES
+  (1,'Andriy','Andy','asdsgs@gmail.com','2 years','Ivanova St. 42/53','09098989032'),
+  (2,'Ivan','Jon','dsfdgsa@gmail.com','3 years','Petrove St. 23/54','08980908708'),
+  (3,'Pavlo','Paul','adsfgfghg@yahoo.com','10 years','Midnight St. 123/6','06532265151'),
+  (4,'Tom','Tom3','tom@gmail.com','15 years','Dash St. 12','0990909900'),
+  (6,'Joe','Joe','joe@gmail.com','25 years','Queens St. 23/812','0887862767'),
+  (7,'Oliver','Oliver','oliver@gmail.com','5 years','King St. 263','0998465488');
