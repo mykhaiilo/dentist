@@ -1,38 +1,38 @@
 package org.dentist.user.domain;
 
 public class User {
-    private int id;
-    private String name;
-    private String nickname;
-    private String email;
-    private String phone;
+    private int idUser;
+    private String fullNameUser;
+    private String nicknameUser;
+    private String emailUser;
+    private String phoneUser;
 
-    public void setId(int id) {
-        this.id = id;
+    public void setIdUser(int idUser) {
+        this.idUser = idUser;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setFullNameUser(String fullNameUser) {
+        this.fullNameUser = fullNameUser;
     }
 
-    public void setNickname(String nickname) {
-        this.nickname = nickname;
+    public void setNicknameUser(String nicknameUser) {
+        this.nicknameUser = nicknameUser;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setEmailUser(String emailUser) {
+        this.emailUser = emailUser;
     }
 
-    public void setPhone(String phone) {
-        this.phone = phone;
+    public void setPhoneUser(String phoneUser) {
+        this.phoneUser = phoneUser;
     }
 
     public String toString() {
-        return getClass().getSimpleName() + " №" + this.id +
-                " : ( id = " + this.id +
-                " , name = " + this.name +
-                " , nickname = " + this.nickname +
-                " , email = " + this.email +
-                " , phone = " + this.phone + " ).";
+        return getClass().getSimpleName() + " №" + this.idUser +
+                " : ( idUser = " + this.idUser +
+                " , fullNameUser = " + this.fullNameUser +
+                " , nicknameUser = " + this.nicknameUser +
+                " , emailUser = " + this.emailUser +
+                " , phoneUser = " + this.phoneUser + " ).";
     }
 }

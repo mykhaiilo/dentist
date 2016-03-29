@@ -7,8 +7,8 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-public class DatabaseWorker {
-    private static final Logger logger = LoggerFactory.getLogger(DatabaseWorker.class);
+public class DatabaseUser {
+    private static final Logger logger = LoggerFactory.getLogger(DatabaseUser.class);
     private final static String URL = "jdbc:mysql://localhost:3306/dentist";
     private final static String USERNAME = "root";
     private final static String PASSWORD = "root";
@@ -18,7 +18,7 @@ public class DatabaseWorker {
         return connection;
     }
 
-    public DatabaseWorker() {
+    public DatabaseUser() {
         try {
             connection = DriverManager.getConnection(URL, USERNAME, PASSWORD);
         } catch (SQLException e) {

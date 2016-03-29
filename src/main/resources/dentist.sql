@@ -1,16 +1,16 @@
 CREATE TABLE `dentist` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `name` varchar(45) NOT NULL,
-  `nickname` varchar(45) NOT NULL,
-  `email` varchar(64) NOT NULL,
+  `idUser` int(11) NOT NULL AUTO_INCREMENT,
+  `fullNameUser` varchar(45) NOT NULL,
+  `nicknameUser` varchar(45) NOT NULL,
+  `emailUser` varchar(64) NOT NULL,
   `experience` varchar(100) DEFAULT NULL,
   `adress` varchar(100) NOT NULL,
-  `phone` varchar(45) DEFAULT NULL,
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `id_UNIQUE` (`id`),
-  UNIQUE KEY `nickname_UNIQUE` (`nickname`),
-  UNIQUE KEY `email_UNIQUE` (`email`),
-  UNIQUE KEY `phone_UNIQUE` (`phone`)
+  `phoneUser` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`idUser`),
+  UNIQUE KEY `id_UNIQUE` (`idUser`),
+  UNIQUE KEY `nickname_UNIQUE` (`nicknameUser`),
+  UNIQUE KEY `email_UNIQUE` (`emailUser`),
+  UNIQUE KEY `phone_UNIQUE` (`phoneUser`)
 ) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8 COMMENT='	';
 INSERT INTO `dentist` VALUES
   (1,'Andriy','Andy','asdsgs@gmail.com','2 years','Ivanova St. 42/53','09098989032'),

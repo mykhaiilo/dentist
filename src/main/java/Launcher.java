@@ -1,8 +1,11 @@
-import org.dentist.user.service.DatabaseConnector;
+import org.dentist.dentist.service.DatabaseConnectorDentist;
+import org.dentist.user.service.DatabaseConnectorUser;
 
 public class Launcher {
     public static void main(String[] args) {
-        DatabaseConnector databaseConnector = new DatabaseConnector();
+        DatabaseConnectorUser databaseConnector = new DatabaseConnectorUser();
         databaseConnector.printDatabase();
+        DatabaseConnectorDentist databaseConnectorDentist= new DatabaseConnectorDentist();
+        databaseConnectorDentist.printDatabaseDentist();
     }
 }
