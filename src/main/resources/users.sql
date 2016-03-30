@@ -1,13 +1,13 @@
 CREATE TABLE `users` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `name` varchar(45) DEFAULT NULL,
-  `nickname` varchar(45) NOT NULL,
-  `email` varchar(64) NOT NULL,
-  `phone` varchar(12) NOT NULL,
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `unique_id` (`id`),
-  UNIQUE KEY `unique_nickname` (`nickname`),
-  UNIQUE KEY `unique_email` (`email`)
+  `idUser` int(11) NOT NULL AUTO_INCREMENT,
+  `fullNameUser` varchar(45) DEFAULT NULL,
+  `nicknameUser` varchar(45) NOT NULL,
+  `emailUser` varchar(64) NOT NULL,
+  `phoneUser` varchar(12) NOT NULL,
+  PRIMARY KEY (`idUser`),
+  UNIQUE KEY `unique_id` (`idUser`),
+  UNIQUE KEY `unique_nickname` (`nicknameUser`),
+  UNIQUE KEY `unique_email` (`emailUser`)
 ) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
 INSERT INTO `users` VALUES
   (1,'Ivan','John','john@gmail.com','0950643654'),
