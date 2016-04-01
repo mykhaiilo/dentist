@@ -2,8 +2,7 @@ package org.dentist.search.service;
 
 public interface DentistSearch {
 
-    String findByName(String name);
+    String findByNickname(String nickname);
     String findByService(String service);
 
 }
-

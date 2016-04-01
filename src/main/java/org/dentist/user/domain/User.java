@@ -27,6 +27,14 @@ public class User {
         this.phoneUser = phoneUser;
     }
 
+    public int getIdUser() {
+        return idUser;
+    }
+
+    public String getNicknameUser() {
+        return nicknameUser;
+    }
+
     public String toString() {
         return getClass().getSimpleName() + " №" + this.idUser +
                 " : ( idUser = " + this.idUser +
