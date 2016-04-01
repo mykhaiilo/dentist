@@ -42,6 +42,14 @@ public class Dentist {
         this.serviceDentist = serviceDentist;
     }
 
+    public String getNicknameDentist() {
+        return nicknameDentist;
+    }
+
+    public String getServiceDentist() {
+        return serviceDentist;
+    }
+
     public String toString() {
         return getClass().getSimpleName() + "№" + this.idDentist +
                 " : ( idUser = " + this.idDentist +
