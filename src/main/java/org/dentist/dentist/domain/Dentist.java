@@ -9,6 +9,7 @@ public class Dentist {
     private String adressDentist;
     private String phoneDentist;
     private String serviceDentist;
+    private boolean permission;
 
     public void setIdDentist(int idDentist) {
         this.idDentist = idDentist;
@@ -48,6 +49,10 @@ public class Dentist {
 
     public String getServiceDentist() {
         return serviceDentist;
+    }
+
+    public boolean isPermission() {
+        return permission;
     }
 
     public String toString() {

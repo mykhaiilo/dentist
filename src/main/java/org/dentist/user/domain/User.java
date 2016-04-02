@@ -6,6 +6,7 @@ public class User {
     private String nicknameUser;
     private String emailUser;
     private String phoneUser;
+    private boolean permission;
 
     public void setIdUser(int idUser) {
         this.idUser = idUser;
@@ -33,6 +34,10 @@ public class User {
 
     public String getNicknameUser() {
         return nicknameUser;
+    }
+
+    public boolean isPermission() {
+        return permission;
     }
 
     public String toString() {
