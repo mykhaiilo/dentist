@@ -4,11 +4,12 @@ import org.dentist.user.domain.DatabaseUser;
 import org.dentist.user.domain.User;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.stereotype.Service;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-
+@Service
 public class DatabaseConnectorUser {
     private static final Logger logger = LoggerFactory.getLogger(DatabaseConnectorUser.class);
     private DatabaseUser databaseWorker = new DatabaseUser();

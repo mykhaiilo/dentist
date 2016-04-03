@@ -3,11 +3,12 @@ import org.dentist.dentist.domain.DatabaseDentist;
 import org.dentist.dentist.domain.Dentist;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.stereotype.Service;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-
+@Service
 public class DatabaseConnectorDentist {
     private static final Logger logger = LoggerFactory.getLogger( DatabaseConnectorDentist.class);
     private DatabaseDentist databaseDentist = new  DatabaseDentist();
