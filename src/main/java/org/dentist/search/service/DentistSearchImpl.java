@@ -1,7 +1,9 @@
 package org.dentist.search.service;
 
 import org.dentist.dentist.domain.Dentist;
+import org.springframework.stereotype.Service;
 
+@Service
 public class DentistSearchImpl implements DentistSearch {
     private static final String NO_DENTIST_BY_NICKNAME = "Did not find any Dentists by this nickname";
     private static final String NO_DENTIST_BY_SERVICE = "Did not find any Dentists by this service";

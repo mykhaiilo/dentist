@@ -1,7 +1,9 @@
 package org.dentist.search.service;
 
 import org.dentist.user.domain.User;
+import org.springframework.stereotype.Service;
 
+@Service
 public class UserSearchImpl implements UserSearch {
     private static final String NO_USER_BY_ID = "Did not find any Dentists by this nickname";
     private static final String NO_USER_BY_NICKNAME = "Did not find any Dentists by this service";
