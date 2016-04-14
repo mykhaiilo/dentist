@@ -1,35 +1,35 @@
-import org.dentist.dentist.service.DatabaseConnectorDentist;
-import org.dentist.user.domain.User;
-import org.dentist.user.service.DatabaseConnectorUser;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.support.FileSystemXmlApplicationContext;
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-
-@Controller
 @EnableAutoConfiguration
+@SpringBootApplication
 public class Launcher {
-    @RequestMapping("/")
-    @ResponseBody
 
-    void home() {
-        String fileName = "src/main/resources/context.xml";
-        ApplicationContext context = new FileSystemXmlApplicationContext(fileName);
-        User user = (User) context.getBean("user");
-        user.setNicknameUser("alec");
-        System.out.println(user.getNicknameUser());
 
-        DatabaseConnectorUser databaseConnector = new DatabaseConnectorUser();
-        databaseConnector.printDatabase();
-        DatabaseConnectorDentist databaseConnectorDentist= new DatabaseConnectorDentist();
-        databaseConnectorDentist.printDatabaseDentist();
-    }
+//    @RequestMapping("/")
+//    @ResponseBody
+//    void home() {
+//        String fileName = "src/main/resources/context.xml";
+//        ApplicationContext context = new FileSystemXmlApplicationContext(fileName);
+//        User user = (User) context.getBean("user");
+//        user.setNicknameUser("alec");
+//        System.out.println(user.getNicknameUser());
+//
+//        DatabaseConnectorUser databaseConnector = new DatabaseConnectorUser();
+//        databaseConnector.printDatabase();
+//        DatabaseConnectorDentist databaseConnectorDentist= new DatabaseConnectorDentist();
+//        databaseConnectorDentist.printDatabaseDentist();
+//    }
+
+
+    // 1. Config file for MySQL - prod profile (javaconfig)
+    // 2. config file for HSQL - dev profile (default) (javaconfig)
+    // 3. all properties should be in property file, i.e. dev-profile.properties
+
+
+
     public static void main(String[] args) {
-
         SpringApplication.run(Launcher.class, args);
     }
 }

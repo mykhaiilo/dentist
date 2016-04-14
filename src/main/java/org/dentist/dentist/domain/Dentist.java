@@ -1,9 +1,12 @@
 package org.dentist.dentist.domain;
 
+import org.springframework.stereotype.Component;
+
 import javax.persistence.*;
 
 @Entity
 @Table(name = "dentist")
+@Component
 public class Dentist {
     @Id
     @Column(name = "id")
