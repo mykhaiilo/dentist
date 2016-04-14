@@ -13,7 +13,7 @@ public class DatabaseDentist {
         private static final Logger logger = LoggerFactory.getLogger(DatabaseDentist.class);
         private final static String URL = "jdbc:mysql://localhost:3306/dentist";
         private final static String USERNAME = "root";
-        private final static String PASSWORD = "root";
+        private final static String PASSWORD = "swordfish";
         private Connection connection;
 
         public Connection getConnection() {
