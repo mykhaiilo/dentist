@@ -13,7 +13,7 @@ import java.sql.SQLException;
 public class DatabaseConnectorUser {
     private static final Logger logger = LoggerFactory.getLogger(DatabaseConnectorUser.class);
     private DatabaseUser databaseWorker = new DatabaseUser();
-    private ResultSet resultSet = null;
+    private ResultSet resultSet=null;
     private PreparedStatement preparedStatement;
     private final static String INSERT_NEW = "INSERT INTO users VALUES (?,?,?,?,?)";
     private final static String GET_ALL = "SELECT * FROM users";
@@ -55,11 +55,11 @@ public class DatabaseConnectorUser {
             try {
                 while (resultSet.next()) {
                     User user = new User();
-                    user.setIdUser(resultSet.getInt("id"));
-                    user.setFullNameUser(resultSet.getString("name"));
-                    user.setNicknameUser(resultSet.getString("nickname"));
-                    user.setEmailUser(resultSet.getString("email"));
-                    user.setPhoneUser(resultSet.getString("phone"));
+                    user.setIdUser(resultSet.getInt("idUser"));
+                    user.setFullNameUser(resultSet.getString("fullNameUser"));
+                    user.setNicknameUser(resultSet.getString("nicknameUser"));
+                    user.setEmailUser(resultSet.getString("emailUser"));
+                    user.setPhoneUser(resultSet.getString("phoneUser"));
                     System.out.println(user);
                 }
             } catch (SQLException e) {
