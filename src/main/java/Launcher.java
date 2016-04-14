@@ -15,11 +15,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 public class Launcher {
     @RequestMapping("/")
     @ResponseBody
-    String home() {
-        return "Hello World!";
-    }
-    public static void main(String[] args) {
 
+    void home() {
         String fileName = "src/main/resources/context.xml";
         ApplicationContext context = new FileSystemXmlApplicationContext(fileName);
         User user = (User) context.getBean("user");
@@ -30,7 +27,8 @@ public class Launcher {
         databaseConnector.printDatabase();
         DatabaseConnectorDentist databaseConnectorDentist= new DatabaseConnectorDentist();
         databaseConnectorDentist.printDatabaseDentist();
-
+    }
+    public static void main(String[] args) {
 
         SpringApplication.run(Launcher.class, args);
     }
