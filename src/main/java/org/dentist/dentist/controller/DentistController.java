@@ -11,9 +11,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
-/**
- * Created by Serhii on 4/14/2016.
- */
 @Controller
 public class DentistController {
 
@@ -21,7 +18,7 @@ public class DentistController {
     public Dentist home() {
 
         Dentist dentist = new Dentist();
-        dentist.setAdressDentist("address");
+        dentist.setAddressDentist("address");
 //        String fileName = "src/main/resources/context.xml";
 //        ApplicationContext context = new FileSystemXmlApplicationContext(fileName);
 //        User user = (User) context.getBean("user");
