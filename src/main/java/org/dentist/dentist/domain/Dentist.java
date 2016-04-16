@@ -55,8 +55,8 @@ public class Dentist {
         this.experienceDentist = experienceDentist;
     }
 
-    public void setAdressDentist(String adressDentist) {
-        this.adressDentist = adressDentist;
+    public void setAddressDentist(String addressDentist) {
+        this.adressDentist = addressDentist;
     }
 
     public void setPhoneDentist(String phoneDentist) {
@@ -86,7 +86,7 @@ public class Dentist {
                 " , nicknameDentist = " + this.nicknameDentist +
                 " , emailDentist = " + this.emailDentist +
                 " , experienceDentist = " + this.experienceDentist +
-                " , adressDentist = " + this.adressDentist +
+                " , addressDentist = " + this.adressDentist +
                 " , phoneDentist = " + this.phoneDentist+
                 " , ServiceDentist = " + this.serviceDentist +" ).";
     }
