@@ -55,7 +55,7 @@ public class Dentist {
         this.experienceDentist = experienceDentist;
     }
 
-    public void setAddressDentist(String addressDentist) {
+    public void setAdressDentist(String addressDentist) {
         this.adressDentist = addressDentist;
     }
 

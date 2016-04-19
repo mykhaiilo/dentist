@@ -22,7 +22,7 @@ public class DatabaseUser {
 
     public DatabaseUser() {
         try {
-            fis = new FileInputStream("/home/michael/IdeaProjects/dentist/src/main/resources/config.properties");
+            fis = new FileInputStream("/home/michael/IdeaProjects/dentist/src/main/resources/application.properties");
             property.load(fis);
             String URL = property.getProperty("db.URL");
             String USERNAME = property.getProperty("db.USERNAME");
