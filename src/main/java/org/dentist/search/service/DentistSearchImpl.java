@@ -28,4 +28,9 @@ public class DentistSearchImpl implements DentistSearch {
         }
         return NO_DENTIST_BY_SERVICE;
     }
+
+    @Override
+    public Dentist getAll() {
+        return dentist;
+    }
 }

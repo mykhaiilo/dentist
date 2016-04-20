@@ -1,27 +1,11 @@
 package org.dentist.user.domain;
 
-import javax.persistence.*;
-
-@Entity
-@Table(name = "users")
 public class User {
-    @Id
-    @Column(name = "id")
-    @GeneratedValue
     private int idUser;
-
-    @Column(name = "name")
     private String fullNameUser;
-
-    @Column(name = "nickname")
     private String nicknameUser;
-
-    @Column(name = "email")
     private String emailUser;
-
-    @Column(name = "phone")
     private String phoneUser;
-
     private boolean permission;
 
     public void setIdUser(int idUser) {
