@@ -17,5 +17,11 @@
     <bean id="databaseUser" class="org.dentist.user.domain.DatabaseUser">
         <!-- collaborators and configuration for this bean go here -->
     </bean>
+    <bean id="databaseConnectorDentist" class="org.dentist.dentist.service.DatabaseConnectorDentist">
+        <!-- collaborators and configuration for this bean go here -->
+    </bean>
+    <bean id="dentistService" class="org.dentist.dentist.service.DentistServiceImpl">
+        <!-- collaborators and configuration for this bean go here -->
+    </bean>
 
 </beans>

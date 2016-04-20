@@ -1,4 +1,4 @@
-html>
+<html>
 <body>
 <div><div class="ads-in-post hide_if_width_less_800">
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>

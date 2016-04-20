@@ -2,36 +2,18 @@ package org.dentist.dentist.domain;
 
 import org.springframework.stereotype.Component;
 
-import javax.persistence.*;
 
-@Entity
-@Table(name = "dentist")
+
+
 @Component
 public class Dentist {
-    @Id
-    @Column(name = "id")
-    @GeneratedValue
     private int idDentist;
-
-    @Column(name = "name")
     private String nameDentist;
-
-    @Column(name = "nickname")
     private String nicknameDentist;
-
-    @Column(name = "email")
     private String emailDentist;
-
-    @Column(name = "experience")
     private int experienceDentist;
-
-    @Column(name = "adress")
     private String adressDentist;
-
-    @Column(name = "phone")
     private String phoneDentist;
-
-    @Column(name = "service")
     private String serviceDentist;
     private boolean permission;
 

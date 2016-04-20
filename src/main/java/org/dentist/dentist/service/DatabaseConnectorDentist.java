@@ -4,13 +4,17 @@ import org.dentist.dentist.domain.Dentist;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 import javax.sql.DataSource;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+
 @Service
+@Component("databaseConnectorDentist")
 public class DatabaseConnectorDentist {
 
     @Autowired
