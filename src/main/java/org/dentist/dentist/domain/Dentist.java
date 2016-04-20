@@ -2,9 +2,6 @@ package org.dentist.dentist.domain;
 
 import org.springframework.stereotype.Component;
 
-
-
-
 @Component
 public class Dentist {
     private int idDentist;

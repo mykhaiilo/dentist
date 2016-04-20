@@ -6,22 +6,19 @@ import org.dentist.dentist.service.DentistService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RequestMapping("/dentist")
-@ResponseBody
-@Controller
+@RestController
 public class DentistController {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(DentistController.class);
     @Autowired
-    @Qualifier("dentistService")
+    //@Qualifier("dentistService")
     private DentistService dentistService;
 
     @RequestMapping(
@@ -32,27 +29,23 @@ public class DentistController {
     }
 
     @RequestMapping(method = RequestMethod.GET)
-    @ResponseBody
     public void getMyDatabase() {
         DatabaseConnectorDentist databaseConnectorDentist = new DatabaseConnectorDentist();
         databaseConnectorDentist.printDatabaseDentist();
     }
 
     @RequestMapping(method = RequestMethod.PUT)
-    @ResponseBody
     public DatabaseConnectorDentist putMyDatabase(@RequestBody DatabaseConnectorDentist databaseConnectorDentist) {
         return databaseConnectorDentist;
     }
 
     @RequestMapping(method = RequestMethod.POST)
-    @ResponseBody
     public void postMyDatabase() {
         DatabaseConnectorDentist databaseConnectorDentist = new DatabaseConnectorDentist();
         databaseConnectorDentist.printDatabaseDentist();
     }
 
-    @RequestMapping( method = RequestMethod.DELETE)
-    @ResponseBody
+    @RequestMapping(method = RequestMethod.DELETE)
     public Dentist deleteMyDatabase(@PathVariable long time) {
         return new Dentist();
     }
