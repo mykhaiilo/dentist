@@ -10,7 +10,7 @@ public class UserSearchImpl implements UserSearch {
     private User user = new User();
 
     public String findUserByID(int idUser) {
-        if (user.getIdUser() == idUser){
+        if (user.getIdUser() == idUser) {
             StringBuilder sb = new StringBuilder();
             sb.append("We have found the user with this ID :");
             sb.append(user);
@@ -20,7 +20,7 @@ public class UserSearchImpl implements UserSearch {
     }
 
     public String findUserByNickname(String nicknameUser) {
-        if (user.getNicknameUser().equals(nicknameUser)){
+        if (user.getNicknameUser().equals(nicknameUser)) {
             StringBuilder sb = new StringBuilder();
             sb.append("We have found the user with this nickname :");
             sb.append(user);

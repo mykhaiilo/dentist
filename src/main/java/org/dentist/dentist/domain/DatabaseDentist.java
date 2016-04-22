@@ -14,14 +14,9 @@ import java.util.Properties;
 public class DatabaseDentist {
 
     private static final Logger logger = LoggerFactory.getLogger(DatabaseDentist.class);
-    private Connection connection;
-
     FileInputStream fis;
     Properties property = new Properties();
-
-    public Connection getConnection() {
-        return connection;
-    }
+    private Connection connection;
 
     public DatabaseDentist() {
         try {
@@ -37,5 +32,9 @@ public class DatabaseDentist {
         } catch (IOException e) {
             logger.error("Error file not found");
         }
+    }
+
+    public Connection getConnection() {
+        return connection;
     }
 }

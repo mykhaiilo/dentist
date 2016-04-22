@@ -8,16 +8,8 @@ public class User {
     private String phoneUser;
     private boolean permission;
 
-    public void setIdUser(int idUser) {
-        this.idUser = idUser;
-    }
-
     public void setFullNameUser(String fullNameUser) {
         this.fullNameUser = fullNameUser;
-    }
-
-    public void setNicknameUser(String nicknameUser) {
-        this.nicknameUser = nicknameUser;
     }
 
     public void setEmailUser(String emailUser) {
@@ -32,8 +24,16 @@ public class User {
         return idUser;
     }
 
+    public void setIdUser(int idUser) {
+        this.idUser = idUser;
+    }
+
     public String getNicknameUser() {
         return nicknameUser;
+    }
+
+    public void setNicknameUser(String nicknameUser) {
+        this.nicknameUser = nicknameUser;
     }
 
     public boolean isPermission() {

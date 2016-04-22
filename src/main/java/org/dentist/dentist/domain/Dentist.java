@@ -2,6 +2,9 @@ package org.dentist.dentist.domain;
 
 import org.springframework.stereotype.Component;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Component
 public class Dentist {
     private int idDentist;
@@ -13,17 +16,10 @@ public class Dentist {
     private String phoneDentist;
     private String serviceDentist;
     private boolean permission;
-
-    public void setIdDentist(int idDentist) {
-        this.idDentist = idDentist;
-    }
+    private List<Dentist> dentists = new ArrayList();
 
     public void setNameDentist(String nameDentist) {
         this.nameDentist = nameDentist;
-    }
-
-    public void setNicknameDentist(String nicknameDentist) {
-        this.nicknameDentist = nicknameDentist;
     }
 
     public void setEmailDentist(String emailDentist) {
@@ -42,20 +38,36 @@ public class Dentist {
         this.phoneDentist = phoneDentist;
     }
 
-    public void setServiceDentist(String serviceDentist) {
-        this.serviceDentist = serviceDentist;
-    }
-
     public String getNicknameDentist() {
         return nicknameDentist;
+    }
+
+    public void setNicknameDentist(String nicknameDentist) {
+        this.nicknameDentist = nicknameDentist;
     }
 
     public String getServiceDentist() {
         return serviceDentist;
     }
 
+    public void setServiceDentist(String serviceDentist) {
+        this.serviceDentist = serviceDentist;
+    }
+
     public boolean isPermission() {
         return permission;
+    }
+
+    public List<Dentist> getDentists() {
+        return dentists;
+    }
+
+    public int getIdDentist() {
+        return idDentist;
+    }
+
+    public void setIdDentist(int idDentist) {
+        this.idDentist = idDentist;
     }
 
     public String toString() {
@@ -66,7 +78,7 @@ public class Dentist {
                 " , emailDentist = " + this.emailDentist +
                 " , experienceDentist = " + this.experienceDentist +
                 " , addressDentist = " + this.adressDentist +
-                " , phoneDentist = " + this.phoneDentist+
-                " , ServiceDentist = " + this.serviceDentist +" ).";
+                " , phoneDentist = " + this.phoneDentist +
+                " , ServiceDentist = " + this.serviceDentist + " ).";
     }
 }

@@ -1,10 +1,10 @@
 package org.dentist.dentist.service;
+
 import org.dentist.dentist.domain.DatabaseDentist;
 import org.dentist.dentist.domain.Dentist;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
@@ -17,15 +17,15 @@ import java.sql.SQLException;
 @Component("databaseConnectorDentist")
 public class DatabaseConnectorDentist {
 
-    @Autowired
-    private DataSource dataSource;
-
-    private static final Logger logger = LoggerFactory.getLogger( DatabaseConnectorDentist.class);
-    private DatabaseDentist databaseDentist = new  DatabaseDentist();
-    private ResultSet resultSet;
-    private PreparedStatement preparedStatement;
+    private static final Logger logger = LoggerFactory.getLogger(DatabaseConnectorDentist.class);
     private final static String INSERT_NEW = "INSERT INTO dentist VALUES (?,?,?,?,?,?,?,?)";
     private final static String GET_ALL = "SELECT * FROM dentist";
+    Dentist dentist = new Dentist();
+    @Autowired
+    private DataSource dataSource;
+    private DatabaseDentist databaseDentist = new DatabaseDentist();
+    private ResultSet resultSet;
+    private PreparedStatement preparedStatement;
 
     private void addNewRows() {
         try {
@@ -70,6 +70,7 @@ public class DatabaseConnectorDentist {
                     dentist.setAdressDentist(resultSet.getString("adressDentist"));
                     dentist.setPhoneDentist(resultSet.getString("phoneDentist"));
                     dentist.setServiceDentist(resultSet.getString("serviceDentist"));
+                    this.dentist.getDentists().add(dentist);
                     System.out.println(dentist);
                 }
             } catch (SQLException e) {

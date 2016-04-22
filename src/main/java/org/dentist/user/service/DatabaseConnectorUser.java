@@ -9,14 +9,15 @@ import org.springframework.stereotype.Service;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+
 @Service
 public class DatabaseConnectorUser {
     private static final Logger logger = LoggerFactory.getLogger(DatabaseConnectorUser.class);
-    private DatabaseUser databaseWorker = new DatabaseUser();
-    private ResultSet resultSet=null;
-    private PreparedStatement preparedStatement;
     private final static String INSERT_NEW = "INSERT INTO users VALUES (?,?,?,?,?)";
     private final static String GET_ALL = "SELECT * FROM users";
+    private DatabaseUser databaseWorker = new DatabaseUser();
+    private ResultSet resultSet = null;
+    private PreparedStatement preparedStatement;
 
     private void addNewRows() {
         try {
@@ -29,8 +30,8 @@ public class DatabaseConnectorUser {
             preparedStatement.execute();
         } catch (SQLException e) {
             logger.error("You received SQLException exception " + e);
-        } catch (NullPointerException e){
-            logger.error("You received NullPointerException exception "+e);
+        } catch (NullPointerException e) {
+            logger.error("You received NullPointerException exception " + e);
         }
 
     }
@@ -41,7 +42,7 @@ public class DatabaseConnectorUser {
             resultSet = preparedStatement.executeQuery();
         } catch (SQLException e) {
             logger.error("You received SQLException exception " + e);
-        }catch (NullPointerException e){
+        } catch (NullPointerException e) {
             logger.error("You received NullPointerException exception " + e);
         }
 

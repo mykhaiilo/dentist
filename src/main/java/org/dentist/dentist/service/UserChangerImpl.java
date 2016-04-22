@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 @Service
-public class UserChangerImpl implements UserChanger{
+public class UserChangerImpl implements UserChanger {
     private Map<User, User> dentistMap = new HashMap<User, User>();
     private User user = new User();
 
