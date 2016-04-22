@@ -6,6 +6,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.util.HashMap;
 import java.util.Map;
+
 @Service
 public class DentistChangerImpl implements DentistChanger {
     private Map<Dentist, Dentist> dentistMap = new HashMap<Dentist, Dentist>();

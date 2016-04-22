@@ -3,33 +3,31 @@ package org.dentist.search.service;
 import org.dentist.dentist.domain.Dentist;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class DentistSearchImpl implements DentistSearch {
-    private static final String NO_DENTIST_BY_NICKNAME = "Did not find any Dentists by this nickname";
-    private static final String NO_DENTIST_BY_SERVICE = "Did not find any Dentists by this service";
     private Dentist dentist = new Dentist();
 
-    public String findByNickname(String nickname) {
-        if (dentist.getNicknameDentist().equals(nickname)){
-            StringBuilder sb = new StringBuilder();
-            sb.append("We have found the dentist with this nickname :");
-            sb.append(dentist);
-            return sb.toString();
+    public Dentist findByNickname(String nickname) {
+        for (int i = 0; i < dentist.getDentists().size(); i++) {
+            if (this.dentist.getDentists().get(i).getNicknameDentist().equals(nickname)) {
+                return this.dentist.getDentists().get(i);
+            }
         }
-        return NO_DENTIST_BY_NICKNAME;
+        return null;
     }
 
-    public String findByService(String service) {
-        if (dentist.getServiceDentist().equals(service)){
-            StringBuilder sb = new StringBuilder();
-            sb.append("We have found the dentist with this service :");
-            sb.append(dentist);
-            return sb.toString();
+    public Dentist findByService(String service) {
+        for (int i = 0; i < dentist.getDentists().size(); i++) {
+            if (this.dentist.getDentists().get(i).getServiceDentist().equals(service)) {
+                return this.dentist.getDentists().get(i);
+            }
         }
-        return NO_DENTIST_BY_SERVICE;
+        return null;
     }
 
-    public Dentist getAll() {
-        return dentist;
+    public List<Dentist> getAll() {
+        return dentist.getDentists();
     }
 }

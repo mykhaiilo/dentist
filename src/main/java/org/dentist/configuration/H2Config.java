@@ -11,13 +11,14 @@ import org.springframework.context.event.ContextRefreshedEvent;
 import org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseBuilder;
 import org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseType;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
+
 import java.util.Properties;
 
 @Configuration
 @Profile("dev")
 @PropertySource("classpath:/dev.properties")
 @EnableTransactionManagement
-public class H2Config  implements ApplicationListener<ContextRefreshedEvent>{
+public class H2Config implements ApplicationListener<ContextRefreshedEvent> {
     @Value("${spring.jpa.database-platform}")
     private String dbPlatform;
 

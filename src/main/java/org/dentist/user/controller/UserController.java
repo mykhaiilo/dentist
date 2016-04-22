@@ -25,5 +25,4 @@ public class UserController {
     private DentistChangerImpl dentistChanger;
 
 
-
 }

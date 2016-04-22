@@ -12,13 +12,9 @@ import java.util.Properties;
 
 public class DatabaseUser {
     private static final Logger logger = LoggerFactory.getLogger(DatabaseUser.class);
-    private Connection connection;
     FileInputStream fis;
     Properties property = new Properties();
-
-    public Connection getConnection() {
-        return connection;
-    }
+    private Connection connection;
 
     public DatabaseUser() {
         try {
@@ -30,8 +26,12 @@ public class DatabaseUser {
             connection = DriverManager.getConnection(URL, USERNAME, PASSWORD);
         } catch (SQLException e) {
             logger.error("You received exception " + e);
-        }catch (IOException e) {
+        } catch (IOException e) {
             logger.error("Error file not found");
+        }
     }
-}
+
+    public Connection getConnection() {
+        return connection;
+    }
 }
